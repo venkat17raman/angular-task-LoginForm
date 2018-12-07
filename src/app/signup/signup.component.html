@@ -1,0 +1,23 @@
+<form Align="center" name="signupForm" #signupForm="ngForm" (ngSubmit)="handlesubmit(signupForm)">
+<div  class="container">
+  <div >
+      <h4 Align="center">SIGNUP</h4>
+      <div>
+        <input type="text" matInput placeholder="Name" name="name" ngModel required id="username">
+      </div>
+      <div>
+        <input type="email" matInput placeholder="Email" name="email" ngModel required id="email">
+      </div>
+      <div>
+        <input type="password" matInput placeholder="password" name="password"  id="password" minlength="6" ngModel required>
+      </div>
+      <div>
+        <input type="password" matInput placeholder="conformpassword" name="conformpassword" id="cpassword" minlength="6" ngModel required>
+      </div>
+      <span>
+        <button  id="submit"color="primary" [disabled]="signupForm.invalid">Register</button>
+      </span>
+    
+  </div>
+</div>
+</form>

@@ -1,0 +1,12 @@
+
+  <div id="buttons">
+    <a type="button" class="button" routerLink="users">Home</a>
+    <a type="button" *ngIf="!isLoggedIn" class="button"routerLink="login">login</a>
+    <a type="button" *ngIf="!isLoggedIn"class="button" routerLink="signup">Signup</a>
+    <span class="logout"></span>
+    <a type="button" *ngIf="isLoggedIn"class="button" (click)="logout()">
+      Logout
+    </a>
+  </div>
+
+<router-outlet></router-outlet>
